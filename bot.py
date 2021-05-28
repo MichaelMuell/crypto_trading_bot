@@ -7,6 +7,13 @@ import websocket
 import binance
 
 SOCKET = "wss://stream.binance.com:9443/ws/ethusdt@kline_1m"
+
+RSI_PERIOD = 14
+RSI_OVERBOUGHT = 70
+RSI_OVERSOLD = 30
+TRADE_SYMBOL = "ETHUSD"
+TRADE_QUANTITY = 0.01
+
 closes = []
 
 def on_open(ws):
@@ -33,3 +40,4 @@ def on_message(ws, message):
 
 ws = websocket.WebSocketApp(SOCKET, on_open=on_open, on_close=on_close, on_message=on_message)
 ws.run_forever()
+
