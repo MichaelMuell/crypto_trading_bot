@@ -1,1 +1,7 @@
-# crypto_trading_bot
+# Crypto Trading Bot 
+
+packages used:<br> 
+websocket <br> 
+binance <br>
+tlib <br>
+numpy <br>
